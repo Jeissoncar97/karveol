@@ -118,8 +118,9 @@ export default function TopAutomations() {
       </div>
 
       {/* Filtros */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8 max-w-5xl mx-auto">
-        {uniqueTypes.map((t) => (
+      <div className="flex flex-col justify-center gap-4 mb-8 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+          {uniqueTypes.map((t) => (
           <button
             key={t}
             onClick={() => setType(t)}
@@ -132,7 +133,9 @@ export default function TopAutomations() {
             {t}
           </button>
         ))}
-        {uniqueCategories.map((c) => (
+        </div>
+        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+          {uniqueCategories.map((c) => (
           <button
             key={c}
             onClick={() => setCategory(c)}
@@ -145,7 +148,9 @@ export default function TopAutomations() {
             {c}
           </button>
         ))}
-        {uniqueLevels.map((l) => (
+        </div>
+        <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+          {uniqueLevels.map((l) => (
           <button
             key={l}
             onClick={() => setLevel(l)}
@@ -158,9 +163,10 @@ export default function TopAutomations() {
             {l}
           </button>
         ))}
+        </div>
         <button
           onClick={resetFilters}
-          className="px-4 py-1 border border-red-400 text-red-300 hover:bg-red-500 hover:text-white rounded-full text-sm"
+          className="px-4 w-35 mx-auto py-1 border border-red-400 text-red-300 hover:bg-red-500 hover:text-white rounded-full text-sm"
         >
           Reiniciar filtros
         </button>

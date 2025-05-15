@@ -53,26 +53,14 @@ const Header = () => {
               <li
                 className="flex justify-center w-full first:mt-5 md:first:mt-0 md:block md:w-auto"
               >
-                <a
-                  href="#"
+                <Link
+                  to="/plans"
                   className="flex items-center md:w-auto justify-center gap-2 md:px-4 md:py-2 hover:bg-gray-900 md:rounded-2xl border border-transparent hover:border-gray-700 transition-all min-h-[50px] md:text-base px-5 py-4 text-xl duration-300 w-full"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2.25A2.75 2.75 0 0 0 3.25 5v14A2.75 2.75 0 0 0 6 21.75h7a.75.75 0 0 0 0-1.5H6c-.69 0-1.25-.56-1.25-1.25V5c0-.69.56-1.25 1.25-1.25h10c.69 0 1.25.56 1.25 1.25v5.5a.75.75 0 0 0 1.5 0V5A2.75 2.75 0 0 0 16 2.25z"/><path fill="currentColor" d="M7 10.25a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3 0a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5zm-3 3a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3 0a.75.75 0 0 0 0 1.5h3.5a.75.75 0 0 0 0-1.5zm-3 3a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3 0a.75.75 0 0 0 0 1.5h2a.75.75 0 0 0 0-1.5z"/><path fill="currentColor" d="M6.076 5.617C6 5.801 6 6.034 6 6.5s0 .699.076.883a1 1 0 0 0 .541.54C6.801 8 7.034 8 7.5 8h7c.466 0 .699 0 .883-.076a1 1 0 0 0 .54-.541C16 7.199 16 6.966 16 6.5s0-.699-.076-.883a1 1 0 0 0-.541-.54C15.199 5 14.966 5 14.5 5h-7c-.466 0-.699 0-.883.076a1 1 0 0 0-.54.541M18.75 14a.75.75 0 0 0-1.5 0v.417h-.087c-.957 0-1.913.7-1.913 1.766c0 .444.12.852.421 1.173c.278.295.633.431.908.513l2.418.701c.092.027.153.052.193.072a.3.3 0 0 1 .042.026l.002.004a.5.5 0 0 1 .016.145c0 .037-.016.093-.084.154a.5.5 0 0 1-.33.112h-1.505c-.419 0-.581-.274-.581-.416a.75.75 0 0 0-1.5 0c0 1.12.973 1.877 2 1.915V21a.75.75 0 0 0 1.5 0v-.417h.087c.957 0 1.913-.7 1.913-1.766c0-.444-.12-.852-.421-1.173c-.278-.295-.633-.431-.908-.513l-2.418-.701a1 1 0 0 1-.193-.072a.3.3 0 0 1-.042-.026l-.002-.004a.5.5 0 0 1-.016-.145c0-.037.016-.093.084-.154a.5.5 0 0 1 .33-.112h1.505c.419 0 .581.274.581.416a.75.75 0 0 0 1.5 0c0-1.12-.973-1.877-2-1.915z" opacity=".5"/></svg>
                   Planes
-                </a>
+                </Link>
               </li>
-              <li
-                className="flex justify-center w-full first:mt-5 md:first:mt-0 md:block md:w-auto"
-              >
-                <a
-                  href="#"
-                  className="flex items-center md:w-auto justify-center gap-2 md:px-4 md:py-2 hover:bg-gray-900 md:rounded-2xl border border-transparent hover:border-gray-700 transition-all min-h-[50px] md:text-base px-5 py-4 text-xl duration-300 w-full"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" color="currentColor"><path d="M12 22c-4.007 0-6.01 0-7.255-1.318S3.5 17.242 3.5 13s0-6.364 1.245-7.682S7.993 4 12 4s6.01 0 7.255 1.318S20.5 8.758 20.5 13s0 6.364-1.245 7.682S16.007 22 12 22M8 4V2m8 2V2"/><path d="M14.018 9.493a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-5.955 7.223c1.058-1.63 2.739-2.24 3.955-2.239s2.848.61 3.906 2.24c.068.105.087.234.025.344c-.247.439-1.016 1.31-1.57 1.369c-.638.067-2.307.077-2.36.077s-1.772-.01-2.41-.077c-.556-.06-1.324-.93-1.572-1.37c-.061-.109-.042-.238.026-.344"/></g></svg>
-                  Contacto
-                </a>
-              </li>
-            
           </ul>
         </nav>
 

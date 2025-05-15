@@ -14,6 +14,7 @@ export default function BlogPost() {
       <div className=" max-w-6xl mx-auto">
         <h1 className="">{post.title}</h1>
       <img src={post.image} alt={post.title} className="rounded my-4" />
+      <p>{post.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
     </article>

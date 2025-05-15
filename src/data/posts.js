@@ -16,7 +16,8 @@ Usando Make y Google Sheets, puedes registrar tus gastos en tiempo real.
 
 Paso a paso...<p/>
     `,
-    image: "/images/blog1.webp"
+    image: "/images/blog1.webp",
+    date: "14 de mayo del 2025"
   },
   {
     id: 2,
@@ -35,7 +36,8 @@ Esta automatización permite contestar mensajes nuevos sin intervención manual.
 
 Y listo.
     `,
-    image: "/images/blog2.webp"
+    image: "/images/blog2.webp",
+    date: "10, de mayo del 2025"
   },
   {
     id: 3,
@@ -54,7 +56,8 @@ Usando Make y Google Sheets, puedes registrar tus gastos en tiempo real.
 
 Paso a paso...<p/>
     `,
-    image: "/images/blog1.webp"
+    image: "/images/blog1.webp",
+    date: "29 de junio del 2025"
   },
   {
     id: 4,
@@ -73,7 +76,8 @@ Esta automatización permite contestar mensajes nuevos sin intervención manual.
 
 Y listo.
     `,
-    image: "/images/blog2.webp"
+    image: "/images/blog2.webp",
+    date: "29 de junio del 2025"
   },{
     id: 5,
     title: "Cómo automatizar tus gastos diarios con Telegram y Google Sheets",
@@ -91,7 +95,8 @@ Usando Make y Google Sheets, puedes registrar tus gastos en tiempo real.
 
 Paso a paso...<p/>
     `,
-    image: "/images/blog1.webp"
+    image: "/images/blog1.webp",
+    date: "22 de junio del 2025"
   },
   {
     id: 6,
@@ -110,7 +115,8 @@ Esta automatización permite contestar mensajes nuevos sin intervención manual.
 
 Y listo.
     `,
-    image: "/images/blog2.webp"
+    image: "/images/blog2.webp",
+    date: "15 de junio del 2025"
   }
   
 ];

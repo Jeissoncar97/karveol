@@ -19,17 +19,26 @@ export default function Footer() {
             <li><a href="#" className="hover:text-white">Catálogo</a></li>
             <li><a href="#" className="hover:text-white">Blog</a></li>
             <li><a href="#" className="hover:text-white">Planes</a></li>
-            <li><a href="#" className="hover:text-white">Contacto</a></li>
           </ul>
         </div>
 
         <div>
+          <div>
           <h3 className="text-white font-medium mb-3">Síguenos</h3>
           <div className="flex space-x-4">
             <a href="#" className="hover:text-white">Twitter</a>
             <a href="#" className="hover:text-white">Instagram</a>
             <a href="#" className="hover:text-white">Telegram</a>
           </div>
+        </div>
+        <div className='pt-5'>
+          <h3 className="text-white font-medium mb-3">Contacto</h3>
+          <div className="flex flex-col space-x-4">
+            <a href="#" className="hover:text-white">jeissoncar97@gmail.com</a>
+            <a href="#" className="hover:text-white">(+57) 321 123 1234</a>
+            <a href="#" className="hover:text-white">Telegram</a>
+          </div>
+        </div>
         </div>
       </div>
 

@@ -214,7 +214,7 @@ export default function TopAutomations() {
                   <span className="bg-zinc-700 px-2 py-1 rounded">{auto.category}</span>
                   <span className="bg-zinc-700 px-2 py-1 rounded">{auto.level}</span>
                 </div>
-                <button className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md text-sm w-full">
+                <button className="bg-primary/80 hover:bg-primary text-white px-4 py-2 rounded-md text-sm w-full transition cursor-pointer">
                   Ver plantilla
                 </button>
               </div>

@@ -1,25 +1,26 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home.jsx'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './pages/Home.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
-import Main from './components/Main.jsx'
+import Blog from './pages/Blog.jsx'
+import BlogPost from './pages/BlogPost.jsx'
 
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Header />
-      <Home />
-      <Main />
+    
+    <Router>
+        <Header />
       <Routes>
-        <Route path="/" element={<h1></h1>} />
-        <Route path="/about" element={<h1></h1>} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/blog" element={<Blog/>} />
         <Route path="/contact" element={<h1></h1>} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   )
 }
 

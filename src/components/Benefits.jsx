@@ -31,7 +31,7 @@ export default function Benefitsdiv() {
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-3xl sm:text-5xl font-bold text-white">
+        <h2 className="text-3xl sm:text-5xl font-bold  text-secondary">
           ¿Por qué automatizar tu día a día?
         </h2>
         <p className="mt-4 text-white/90 text-lg">

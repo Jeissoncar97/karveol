@@ -87,7 +87,10 @@ const Home = () => {
 						</a>
 					))}
 				</div>
-				<TopAutomations />
+        			<div className="text-white py-20 px-4 sm:px-6 lg:px-20">
+						<h2 className="text-3xl sm:text-5xl font-bold mx-auto text-center mb-20 text-secondary">Automatizaciones más usadas</h2>
+					<TopAutomations />
+					</div>
 			</div>
 		</div>
 	);

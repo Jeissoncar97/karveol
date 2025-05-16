@@ -7,6 +7,7 @@ import Blog from './pages/Blog.jsx'
 import BlogPost from './pages/BlogPost.jsx'
 import Plans from './pages/Plans.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx';
+import Catalog from './pages/Catalog.jsx'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<h1></h1>} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/plans" element={<Plans/>} />
+        <Route path="/Catalog" element={<Catalog />} />
         
       </Routes>
       <Footer />

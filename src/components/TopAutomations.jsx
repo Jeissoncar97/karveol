@@ -111,9 +111,8 @@ export default function TopAutomations() {
   });
 
   return (
-    <div className="text-white py-20 px-4 sm:px-6 lg:px-20">
+    <div>
       <div className="max-w-7xl mx-auto text-center mb-10">
-        <h2 className="text-3xl font-bold">Automatizaciones más usadas</h2>
         <p className="text-zinc-400 mt-2">Explora y filtra según tus necesidades.</p>
       </div>
 
@@ -172,7 +171,6 @@ export default function TopAutomations() {
         </button>
       </div>
 
-      {/* Búsqueda */}
       <div className="mb-10 max-w-md mx-auto">
         <input
           type="text"
@@ -183,7 +181,6 @@ export default function TopAutomations() {
         />
       </div>
 
-      {/* Resultados */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {filtered.length > 0 ? (
           filtered.map((auto, i) => (
@@ -208,7 +205,7 @@ export default function TopAutomations() {
                 </span>
               </div>
               <div className="p-5">
-                <h3 className="text-xl font-semibold mb-2">{auto.title}</h3>
+                <a href="#" className="text-2xl font-semibold mb-2 my-40"><h3>{auto.title}</h3></a>
                 <p className="text-zinc-400 text-sm mb-4">{auto.description}</p>
                 <div className="flex justify-between items-center text-xs text-zinc-500 mb-2">
                   <span className="bg-zinc-700 px-2 py-1 rounded">{auto.category}</span>

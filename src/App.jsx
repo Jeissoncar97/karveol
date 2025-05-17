@@ -11,6 +11,9 @@ import Catalog from './pages/Catalog.jsx';
 import NotFound from './pages/NotFound.jsx';
 import LogIn from './pages/LogIn.jsx';
 import Register from './pages/Register.jsx';
+import TermsAndConditions from './pages/TermsAndConditions.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import Profile from './pages/Profile.jsx';
 
 function App() {
 	return (
@@ -26,6 +29,12 @@ function App() {
 				<Route path="*" element={<NotFound />} />
 				<Route path="/log-in" element={<LogIn />} />
 				<Route path="/register" element={<Register />} />
+				<Route
+					path="/terminos-y-condiciones"
+					element={<TermsAndConditions />}
+				/>
+				<Route path="/politicas" element={<PrivacyPolicy />} />
+				<Route path="/perfil" element={<Profile />} />
 			</Routes>
 			<Footer />
 		</Router>

@@ -165,7 +165,7 @@ export const posts = [
 			'5 tareas del día a día que puedes automatizar sin ser un experto',
 		slug: '5-tareas-del-día-a-día-que-puedes-automatizar-sin-ser-un-experto',
 		summary:
-			'Registra tus gastos enviando un mensaje por Telegram que se guarda automáticamente.',
+			'Automatiza tareas diarias fácilmente con Make y ahorra tiempo sin complicarte. Ideal para tu día a día.',
 		content: `
     <div class="max-w-4xl mx-auto">
         <p class="text-lg  mb-10">
@@ -175,80 +175,82 @@ export const posts = [
         <p class="mb-6">
           Hoy te voy a mostrar 5 cosas que puedes automatizar fácilmente usando
           <a
-            href="https://www.make.com"
+            href="https://www.make.com/en/register?pc=karveol"
             target="_blank"
             rel="noopener noreferrer"
-            class=" underline hover:"
+            class="text-blue-400 hover:underline hover:decoration-blue-400"
           >
-            Make
-          </a>
-          (antes Integromat), sin saber nada de programación. Solo necesitas ganas de ahorrar tiempo y una idea básica de qué quieres lograr. ¿Listo? ¡Vamos! 🚀
+            Make</a> (antes Integromat), sin saber nada de programación. Solo necesitas ganas de ahorrar tiempo y una idea básica de qué quieres lograr. ¿Listo? ¡Vamos! 🚀
         </p>
 
         <div class="space-y-10">
-          <div>
-            <h2 class="text-2xl font-semibold ">🧠 1. Guardar automáticamente los archivos que recibes por correo</h2>
+        
+        <div>
+            <hr class="text-gray-700 my-10">
+            <h3 class="text-3xl font-bold pb-10"">🧠 1. Guardar automáticamente los archivos que recibes por correo</h2>
             <p>
-              ¿Te mandan facturas, PDFs o imágenes constantemente por Gmail? Con Make puedes hacer que{" "}
+              ¿Te mandan facturas, PDFs o imágenes constantemente por Gmail? Con Make puedes hacer que
               <strong>cada archivo adjunto se guarde automáticamente en tu Google Drive o Dropbox</strong>, clasificado por carpetas y con fecha.
               <br />👉 Te quitas el lío de buscarlos uno por uno.
             </p>
           </div>
 
           <div>
-            <h2 class="text-2xl font-semibold ">📅 2. Crear eventos en tu calendario a partir de formularios o mensajes</h2>
+            <hr class="text-gray-700 my-10">
+            <h3 class="text-3xl font-bold pb-10"">📅 2. Crear eventos en tu calendario a partir de formularios o mensajes</h2>
             <p>
-              ¿Alguien te llena un formulario de contacto? ¿Te escriben por WhatsApp o Telegram para agendar algo? Haz que Make tome esos datos y{" "}
+              ¿Alguien te llena un formulario de contacto? ¿Te escriben por WhatsApp o Telegram para agendar algo? Haz que Make tome esos datos y
               <strong>cree automáticamente una cita en tu Google Calendar</strong>, incluso te puede mandar un recordatorio.
             </p>
           </div>
 
           <div>
-            <h2 class="text-2xl font-semibold ">📈 3. Registrar tus gastos personales en una hoja de cálculo</h2>
+            <hr class="text-gray-700 my-10">
+            <h3 class="text-3xl font-bold pb-10"">📈 3. Registrar tus gastos personales en una hoja de cálculo</h2>
             <p>
-              ¿Quieres llevar un control de tus gastos sin abrir Excel todos los días? Puedes usar Telegram para enviar tus gastos como mensajes, y Make los recibe, los organiza por categoría y{" "}
+              ¿Quieres llevar un control de tus gastos sin abrir Excel todos los días? Puedes usar Telegram para enviar tus gastos como mensajes, y Make los recibe, los organiza por categoría y
               <strong>los guarda en Google Sheets sin que tú toques el archivo</strong>.
             </p>
           </div>
 
           <div>
-            <h2 class="text-2xl font-semibold ">📩 4. Responder automáticamente mensajes frecuentes</h2>
+            <hr class="text-gray-700 my-10">
+            <h3 class="text-3xl font-bold pb-10"">📩 4. Responder automáticamente mensajes frecuentes</h2>
             <p>
-              ¿Siempre te hacen las mismas preguntas por Instagram, correo o WhatsApp? Puedes usar Make para{" "}
+              ¿Siempre te hacen las mismas preguntas por Instagram, correo o WhatsApp? Puedes usar Make para
               <strong>mandar respuestas automáticas</strong> dependiendo de lo que te escriban.
               <br />Ideal para horarios, precios, ubicación, o si estás fuera de línea.
             </p>
           </div>
 
           <div>
-            <h2 class="text-2xl font-semibold ">🛍 5. Enviar correos cuando alguien descarga algo gratis o compra</h2>
+            <hr class="text-gray-700 my-10">
+            <h3 class="text-3xl font-bold pb-10"">🛍 5. Enviar correos cuando alguien descarga algo gratis o compra</h2>
             <p>
-              ¿Tienes un catálogo de automatizaciones (como esta página 👀)? Puedes hacer que Make envíe automáticamente un{" "}
+              ¿Tienes un catálogo de automatizaciones (como esta página 👀)? Puedes hacer que Make envíe automáticamente un
               <strong>correo de bienvenida, un tutorial, o incluso una factura</strong> después de que alguien se registra o compra.
             </p>
           </div>
         </div>
 
         <div class="mt-12 border-t border-white/20 pt-6">
-          <h3 class="text-2xl font-bold  mb-4">¿Y lo mejor? Todo esto ya lo puedes hacer con plantillas</h3>
+          <h3 class="text-3xl font-bold pb-10">¿Y lo mejor? Todo esto ya lo puedes hacer con plantillas</h3>
           <p class="mb-4">
-            En nuestra web encontrarás varias automatizaciones listas para usar. Algunas son 100% gratis, otras requieren que te registres, y otras son exclusivas del plan premium. Pero todas tienen algo en común:{" "}
+            En nuestra web encontrarás varias automatizaciones listas para usar. Algunas son 100% gratis, otras requieren que te registres, y otras son exclusivas del plan premium. Pero todas tienen algo en común:
             <strong>te ahorran tiempo y te hacen la vida más fácil.</strong>
           </p>
           <p>
-            Así que ya sabes, si quieres dejar de ser un robot y empezar a vivir más tu tiempo, pásate por nuestro{" "}
+            Así que ya sabes, si quieres dejar de ser un robot y empezar a vivir más tu tiempo, pásate por nuestro
             <a
-              href="/catalogo"
-              class=" underline hover:"
+              href="/catalog"
+              class="text-blue-400 hover:underline hover:decoration-blue-400"
             >
-              catálogo de automatizaciones
-            </a>
-            . No necesitas ser técnico, solo necesitas querer simplificar tu día.
+              catálogo de automatizaciones</a>. No necesitas ser técnico, solo necesitas querer simplificar tu día.
           </p>
         </div>
       </div>
     `,
-		image: '/images/images-blog/blog1.png',
+		image: '/images/images-blog/blog2.jpg',
 		date: '15 de mayo del 2025',
 	},
 ];

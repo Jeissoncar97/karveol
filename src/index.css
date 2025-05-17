@@ -4,14 +4,14 @@
 	--color-secondary: #00ffc3;
 	--font-inter: 'Inter';
 }
-	@layer utilities {
-		.bg-logo-gradient {
-			background-image: linear-gradient(to bottom, #09000d, #0f0015, #1c0027);
-		}
-		.bg-brand-gray-mix {
-			background: color-mix(in oklab, var(--color-brand-gray) 5%, transparent);
-		}
+@layer utilities {
+	.bg-logo-gradient {
+		background-image: linear-gradient(to bottom, #09000d, #0f0015, #1c0027);
 	}
+	.bg-brand-gray-mix {
+		background: color-mix(in oklab, var(--color-brand-gray) 5%, transparent);
+	}
+}
 
 @font-face {
 	font-family: 'Inter';
@@ -20,4 +20,24 @@
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
+}
+@layer base {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    box-shadow:transparent inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff; /* Asegúrate de que el texto siga siendo blanco */
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
 }

@@ -6,51 +6,35 @@ import client from '../data/client';
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [user, setUser] = useState(null);
-	const [loading, setLoading] = useState(true); // Estado para manejar la carga
 	const navigate = useNavigate();
 
 	useEffect(() => {
 		const getUser = async () => {
-			try {
-				const {
-					data: { user },
-				} = await client.auth.getUser();
+			const {
+				data: { user },
+			} = await client.auth.getUser();
+
+			if (!user) {
+				navigate('/log-in'); // Redirige si no está logueado
+			} else {
 				setUser(user);
-			} catch (error) {
-				console.error('Error al obtener usuario:', error);
-				setUser(null);
-			} finally {
-				setLoading(false);
 			}
 		};
 		getUser();
 	}, [navigate]);
 
 	const handleLogout = async () => {
-		try {
-			await client.auth.signOut();
-			setUser(null);
-			navigate('/');
-		} catch (error) {
-			console.error('Error al cerrar sesión:', error);
-		}
+		await client.auth.signOut();
+		navigate('/log-in'); // Redirige al login después de cerrar sesión
+		console.log(user);
 	};
 
 	const toggleNav = () => {
 		setIsOpen(!isOpen);
 	};
-
 	const closeMenu = () => {
 		setIsOpen(false);
 	};
-
-	if (loading) {
-		return (
-			<header className="backdrop-blur-[10px] w-full overflow-visible z-[99999] header-animate mb-10 py-4 fixed">
-				<div className="max-w-7xl mx-auto px-4">Cargando...</div>
-			</header>
-		);
-	}
 
 	return (
 		<header className="backdrop-blur-[10px] md:backdrop-blur-0 w-full overflow-visible z-[99999] header-animate mb-10 py-4 fixed">
@@ -166,17 +150,13 @@ const Header = () => {
 					{user ? (
 						<>
 							<Link
-								onClick={closeMenu}
-								to="/perfil"
-								className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold"
+								to={'/perfil'}
+								className="text-white flex items-center gap-2.5 font-bold transition-transform duration-300 hover:scale-110"
 							>
-								Ver perfil
+								Perfil
 							</Link>
 							<button
-								onClick={() => {
-									handleLogout();
-									closeMenu();
-								}}
+								onClick={handleLogout}
 								className="cursor-pointer px-4 justify-center rounded-[10px] flex items-center gap-x-2.5 hover:scale-105 transition-transform duration-300 bg-red-500 text-white border-brand-blue font-bold text-lg py-1.5"
 							>
 								Cerrar sesión
@@ -185,14 +165,12 @@ const Header = () => {
 					) : (
 						<>
 							<Link
-								onClick={closeMenu}
 								to="/log-in"
 								className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold"
 							>
 								Iniciar sesión
 							</Link>
 							<Link
-								onClick={closeMenu}
 								to="/sign-up"
 								className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white font-semibold"
 							>

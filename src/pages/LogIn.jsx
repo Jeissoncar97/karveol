@@ -89,7 +89,14 @@ const LogIn = () => {
 
 							{error && <p className="text-red-500 text-sm">{error}</p>}
 							{success && <p className="text-green-500 text-sm">{success}</p>}
-
+							<div className="mt-4 text-center">
+								<Link
+									to="/forgot-password"
+									className="text-blue-600 hover:underline"
+								>
+									¿Olvidaste tu contraseña?
+								</Link>
+							</div>
 							<div>
 								<span>
 									¿No tienes una cuenta?{' '}

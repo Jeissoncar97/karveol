@@ -17,7 +17,7 @@ const LogIn = () => {
 		setError('');
 		setSuccess('');
 
-		const { data, error } = await client.auth.signInWithPassword({
+		const { error } = await client.auth.signInWithPassword({
 			email: formData.email,
 			password: formData.password,
 		});
@@ -89,14 +89,15 @@ const LogIn = () => {
 
 							{error && <p className="text-red-500 text-sm">{error}</p>}
 							{success && <p className="text-green-500 text-sm">{success}</p>}
-							<div className="mt-4 text-center">
+							<p className="text-center mt-4">
+								¿Olvidaste tu contraseña?{' '}
 								<Link
-									to="/forgot-password"
-									className="text-blue-600 hover:underline"
+									to={'/forgot-password'}
+									className="text-blue-500 hover:underline"
 								>
-									¿Olvidaste tu contraseña?
+									Restablecer
 								</Link>
-							</div>
+							</p>
 							<div>
 								<span>
 									¿No tienes una cuenta?{' '}

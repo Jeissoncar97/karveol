@@ -14,7 +14,7 @@ import TermsAndConditions from './pages/TermsAndConditions.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import Profile from './pages/pages-user/Profile.jsx';
 import Header from './components/Header.jsx';
-import ForgotPassword from './pages/pages-user/FotgotPassword.jsx';
+import ForgotPassword from './pages/pages-user/ForgotPassword.jsx';
 import ResetPassword from './pages/pages-user/ResetPassword.jsx';
 import AuthCallback from './pages/pages-user/callback.jsx';
 

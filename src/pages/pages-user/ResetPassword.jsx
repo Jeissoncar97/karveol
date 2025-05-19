@@ -1,91 +1,69 @@
-import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import client from '../../data/client';
 
 const ResetPassword = () => {
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
-  const location = useLocation();
+	const [password, setPassword] = useState('');
+	const [confirm, setConfirm] = useState('');
+	const [message, setMessage] = useState('');
+	const [error, setError] = useState('');
+	const navigate = useNavigate();
 
-  useEffect(() => {
-    const validateRecoverySession = async () => {
-      try {
-        // Extraer parámetros del hash
-        const hashParams = new URLSearchParams(location.hash.substring(1));
-        const accessToken = hashParams.get('access_token');
-        const type = hashParams.get('type');
+	const handleReset = async (e) => {
+		e.preventDefault();
+		setMessage('');
+		setError('');
 
-        if (type !== 'recovery' || !accessToken) {
-          throw new Error('invalid_recovery_token');
-        }
+		if (password !== confirm) {
+			setError('Las contraseñas no coinciden.');
+			return;
+		}
 
-        // Verificar la sesión de recuperación
-        const { data: { session }, error } = await client.auth.getSession();
+		const { error } = await client.auth.updateUser({ password });
 
-        if (error || !session?.user?.recovery_session) {
-          throw new Error('invalid_recovery_session');
-        }
+		if (error) {
+			setError('Hubo un error al actualizar la contraseña: ' + error.message);
+		} else {
+			setMessage('Contraseña actualizada correctamente...');
+			setTimeout(() => navigate('/perfil'), 3000);
+		}
+	};
 
-        setMessage('');
-      } catch (error) {
-        setMessage('Enlace inválido o expirado. Por favor solicita uno nuevo.', error);
-        setTimeout(() => navigate('/forgot-password'), 3000);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    validateRecoverySession();
-  }, [navigate, location]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (password.length < 6) {
-      setMessage('La contraseña debe tener al menos 6 caracteres');
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setMessage('Las contraseñas no coinciden');
-      return;
-    }
-
-    setLoading(true);
-    
-    try {
-      const { error } = await client.auth.updateUser({ password });
-
-      if (error) throw error;
-      
-      setMessage('¡Contraseña actualizada correctamente!');
-      setTimeout(() => navigate('/log-in'), 2000);
-    } catch (error) {
-      setMessage(error.message || 'Error al actualizar la contraseña');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (loading) {
-    return <div>Validando enlace de recuperación...</div>;
-  }
-
-  if (message) {
-    return <div>{message}</div>;
-  }
-
-  return (
-    <div>
-      <h2>Restablecer Contraseña</h2>
-      <form onSubmit={handleSubmit}>
-        {/* Campos del formulario */}
-      </form>
-    </div>
-  );
+	return (
+		<div className="w-full bg-logo-gradient py-40 text-white mx-auto place-content-center flex items-center min-h-screen">
+			<div className="max-w-md mx-auto mt-20 p-6 shadow-lg rounded-lg">
+				<h2 className="text-2xl font-semibold mb-4 text-center">
+					Restablecer contraseña
+				</h2>
+				<form onSubmit={handleReset} className="flex flex-col gap-4">
+					<input
+						type="password"
+						placeholder="Nueva contraseña"
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+						required
+						className="border rounded px-4 py-2"
+					/>
+					<input
+						type="password"
+						placeholder="Confirmar contraseña"
+						value={confirm}
+						onChange={(e) => setConfirm(e.target.value)}
+						required
+						className="border rounded px-4 py-2"
+					/>
+					<button
+						type="submit"
+						className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 cursor-pointer"
+					>
+						Actualizar contraseña
+					</button>
+				</form>
+				{error && <p className="text-red-500 mt-4 text-sm">{error}</p>}
+				{message && <p className="text-green-500 mt-4 text-sm">{message}</p>}
+			</div>
+		</div>
+	);
 };
 
 export default ResetPassword;

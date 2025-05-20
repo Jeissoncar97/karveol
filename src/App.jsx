@@ -17,6 +17,8 @@ import Header from './components/Header.jsx';
 import ForgotPassword from './pages/pages-user/ForgotPassword.jsx';
 import ResetPassword from './pages/pages-user/ResetPassword.jsx';
 import AuthCallback from './pages/pages-user/callback.jsx';
+import PrivateRoute from './context/privateRoute.jsx';
+import PublicRoute from './context/PublicRoute.jsx';
 
 function App() {
 	return (
@@ -30,14 +32,14 @@ function App() {
 				<Route path="/plans" element={<Plans />} />
 				<Route path="/Catalog" element={<Catalog />} />
 				<Route path="*" element={<NotFound />} />
-				<Route path="/log-in" element={<LogIn />} />
-				<Route path="/sign-up" element={<Register />} />
+				<Route path="/log-in" element={<PublicRoute><LogIn /></PublicRoute>} />
+				<Route path="/sign-up" element={<PublicRoute><Register /></PublicRoute>} />
 				<Route
 					path="/terminos-y-condiciones"
 					element={<TermsAndConditions />}
 				/>
 				<Route path="/politicas" element={<PrivacyPolicy />} />
-				<Route path="/perfil" element={<Profile />} />
+				<Route path="/perfil" element={<PrivateRoute><Profile /></PrivateRoute>} />
 				<Route path="/forgot-password" element={<ForgotPassword />} />
 				<Route path="/reset-password" element={<ResetPassword />} />
 				<Route path="/auth/callback" element={<AuthCallback />} />

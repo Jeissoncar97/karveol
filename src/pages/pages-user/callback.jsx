@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import client from '../../data/client';
 
 const AuthCallback = () => {
   const navigate = useNavigate();

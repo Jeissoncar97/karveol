@@ -10,7 +10,7 @@ const Register = () => {
 		email: '',
 		password: '',
 		confirmPassword: '',
-		country: '',
+		country: null,
 	});
 
 	const [error, setError] = useState('');
@@ -20,6 +20,14 @@ const Register = () => {
 	const handleOnChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
+
+	const handleCountryChange = (selectedOption) => {
+
+  setFormData({
+    ...formData,
+    country: selectedOption ? selectedOption.label : '',
+  });
+};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -32,7 +40,7 @@ const Register = () => {
 			return;
 		}
 
-		const { data, error } = await supabase.auth.signUp({
+		const { error } = await supabase.auth.signUp({
 			email: formData.email,
 			password: formData.password,
 			options: {
@@ -111,7 +119,11 @@ const Register = () => {
 									Dirección de correo electrónico
 								</label>
 							</div>
-							<CountrySelector />
+							<CountrySelector 
+								value={formData.country}
+								onChange={handleCountryChange}
+								
+							/>
 							<div className="flex flex-col gap-2 text-center relative justify-center aling-center">
 								<input
 									required
@@ -121,6 +133,7 @@ const Register = () => {
 									name="password"
 									id="password"
 									placeholder=""
+									autoComplete="current-password"
 									className="peer h-14 w-full rounded-full border border-gray-700 bg-transparent px-4 py-6\3 text-sm text-white placeholder-transparent outline-none transition-all duration-200 focus:border-blue-500 focus:ring-0"
 								/>
 								<label
@@ -139,6 +152,7 @@ const Register = () => {
 									name="confirmPassword"
 									id="confirmPassword"
 									placeholder=""
+									autoComplete="current-password"
 									className="peer h-14 w-full rounded-full border border-gray-700 bg-transparent px-4 py-6\3 text-sm text-white placeholder-transparent outline-none transition-all duration-200 focus:border-blue-500 focus:ring-0"
 								/>
 								<label

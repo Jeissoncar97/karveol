@@ -1,8 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
 
 const customStyles = {
+
 	control: (base, state) => ({
 		...base,
 		backgroundColor: '#0f0015',
@@ -64,13 +65,11 @@ const customStyles = {
 	}),
 };
 
-const CountrySelector = () => {
-	const [selectedCountry, setSelectedCountry] = useState(null);
+const CountrySelector = ({value, onChange}) => {
+
 	const options = useMemo(() => countryList().getData(), []);
 
-	const handleChange = (value) => {
-		setSelectedCountry(value);
-	};
+	
 
 	return (
 		<div className="">
@@ -78,10 +77,11 @@ const CountrySelector = () => {
 			<Select
 				required
 				options={options}
-				value={selectedCountry}
-				onChange={handleChange}
+				value={value}
+				onChange={onChange}
 				placeholder="Selecciona un país"
 				styles={customStyles}
+				
 			/>
 		</div>
 	);

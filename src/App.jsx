@@ -17,7 +17,7 @@ import Header from './components/Header.jsx';
 import ForgotPassword from './pages/pages-user/ForgotPassword.jsx';
 import ResetPassword from './pages/pages-user/ResetPassword.jsx';
 import AuthCallback from './pages/pages-user/callback.jsx';
-import PrivateRoute from './context/privateRoute.jsx';
+import PrivateRoute from './context/PrivateRoute.jsx';
 import PublicRoute from './context/PublicRoute.jsx';
 
 function App() {

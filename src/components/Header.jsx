@@ -160,10 +160,8 @@ const Header = () => {
 							</Link>
 						</li>
 					</ul>
-				</nav>
-
-				<div className="flex md:flex-grow md:basis-0 items-center gap-4 mr-4 ml-auto md:ml-0 justify-end">
-					{user ? (
+					<div>
+						{user ? (
 						<>
 							<Link
 								onClick={closeMenu}
@@ -200,6 +198,11 @@ const Header = () => {
 							</Link>
 						</>
 					)}
+					</div>
+				</nav>
+
+				<div className="flex md:flex-grow md:basis-0 items-center gap-4 mr-4 ml-auto md:ml-0 justify-end md:hidden">
+					
 					<button
 						onClick={toggleNav}
 						className="flex items-center justify-center py-2 md:hidden"

@@ -98,7 +98,7 @@ const LogIn = () => {
 									Restablecer
 								</Link>
 							</p>
-							<div>
+							<div className="text-center">
 								<span>
 									¿No tienes una cuenta?{' '}
 									<Link

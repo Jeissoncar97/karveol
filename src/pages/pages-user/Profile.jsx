@@ -23,28 +23,26 @@ const Profile = () => {
 	}, [navigate]);
 
 	return (
-		<div>
-			<div className="py-40 px-4 bg-logo-gradient">
-				<div className="text-white px-4 pt-20 max-w-xl mx-auto ">
-					<h1 className="text-3xl font-bold mb-4">Mi perfil</h1>
-					{user ? (
-						<div className="space-y-4">
-							<p>
-								<strong>Correo:</strong> {user.email}
-							</p>
-							<p>
-								<strong>Nombre:</strong>{' '}
-								{user.user_metadata?.name || 'No registrado'}
-							</p>
-							<p>
-								<strong>País:</strong>{' '}
-								{user.user_metadata?.country || 'No registrado'}
-							</p>
-						</div>
-					) : (
-						<p>Cargando perfil...</p>
-					)}
-				</div>
+		<div className="py-40 px-4 bg-logo-gradient min-h-screen">
+			<div className="text-white px-4 pt-20 max-w-xl mx-auto ">
+				<h1 className="text-3xl font-bold mb-4">Mi perfil</h1>
+				{user ? (
+					<div className="space-y-4">
+						<p>
+							<strong>Correo:</strong> {user.email}
+						</p>
+						<p>
+							<strong>Nombre:</strong>{' '}
+							{user.user_metadata?.name || 'No registrado'}
+						</p>
+						<p>
+							<strong>País:</strong>{' '}
+							{user.user_metadata?.country || 'No registrado'}
+						</p>
+					</div>
+				) : (
+					<p>Cargando perfil...</p>
+				)}
 			</div>
 		</div>
 	);

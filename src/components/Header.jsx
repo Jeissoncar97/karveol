@@ -76,7 +76,7 @@ const Header = () => {
 						isOpen ? 'max-h-[500px]' : 'max-h-0'
 					} md:max-h-full`}
 				>
-					<ul className="flex flex-col items-center overflow-hidden md:flex-row gap-x-2">
+					<ul className="flex flex-col items-center overflow-hidden md:flex-row gap-x-2 mr-0 md:mr-4">
 						<li className="flex justify-center w-full first:mt-5 md:first:mt-0 md:block md:w-auto">
 							<Link
 								onClick={closeMenu}
@@ -160,49 +160,48 @@ const Header = () => {
 							</Link>
 						</li>
 					</ul>
-					<div>
+					<div className="mx-auto flex items-center gap-4 justify-center">
 						{user ? (
-						<>
-							<Link
-								onClick={closeMenu}
-								to="/perfil"
-								className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold"
-							>
-								Ver perfil
-							</Link>
-							<button
-								onClick={() => {
-									handleLogout();
-									closeMenu();
-								}}
-								className="cursor-pointer px-4 justify-center rounded-[10px] flex items-center gap-x-2.5 hover:scale-105 transition-transform duration-300 bg-red-500 text-white border-brand-blue font-bold text-lg py-1.5"
-							>
-								Cerrar sesión
-							</button>
-						</>
-					) : (
-						<>
-							<Link
-								onClick={closeMenu}
-								to="/log-in"
-								className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold"
-							>
-								Iniciar sesión
-							</Link>
-							<Link
-								onClick={closeMenu}
-								to="/sign-up"
-								className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white font-semibold"
-							>
-								Registrarse
-							</Link>
-						</>
-					)}
+							<div className="flex flex-col md:flex-row items-center gap-2 mt-2 md:mt-0 mr-0 md:mr-4">
+								<Link
+									onClick={closeMenu}
+									to="/perfil"
+									className="min-w-[139px] text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold"
+								>
+									Ver perfil
+								</Link>
+								<button
+									onClick={() => {
+										handleLogout();
+										closeMenu();
+									}}
+									className="min-w-[139px] text-center cursor-pointer px-4 justify-center rounded-[10px] flex items-center gap-x-2.5 hover:scale-105 transition-transform duration-300 bg-red-500 text-white border-brand-blue font-bold text-lg py-1.5"
+								>
+									Cerrar sesión
+								</button>
+							</div>
+						) : (
+							<div className="flex flex-col md:flex-row items-center gap-2 mt-2 md:mt-0 mr-0 md:mr-4">
+								<Link
+									onClick={closeMenu}
+									to="/log-in"
+									className="min-w-[139px] text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold"
+								>
+									Iniciar sesión
+								</Link>
+								<Link
+									onClick={closeMenu}
+									to="/sign-up"
+									className="px-4 min-w-[139px] text-center py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white font-semibold px-"
+								>
+									Registrarse
+								</Link>
+							</div>
+						)}
 					</div>
 				</nav>
 
 				<div className="flex md:flex-grow md:basis-0 items-center gap-4 mr-4 ml-auto md:ml-0 justify-end md:hidden">
-					
 					<button
 						onClick={toggleNav}
 						className="flex items-center justify-center py-2 md:hidden"
